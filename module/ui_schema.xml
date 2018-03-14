@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='utf-8'?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>FILL THIS IN</h:title>
+    <model>
+      <instance>
+        <faims id="FILL_THIS_IN">
+          <!--START: Style-->
+          <style>
+            <orientation>
+              <orientation/>
+            </orientation>
+            <even>
+              <layout_weight/>
+            </even>
+            <large>
+              <layout_weight/>
+            </large>
+          </style>
+          <!--END: Style-->
+          <Login>
+            <Group_List>
+              <Guide/>
+              <Groups/>
+              <School_Login/>
+            </Group_List>
+          </Login>
+          <Instructions>
+            <Instructions>
+              <Guide/>
+              <Scoop_a_Poop/>
+            </Instructions>
+          </Instructions>
+          <Poop_Sample>
+            <Poop_Sample>
+              <Poop_Sample_author/>
+              <Poop_Sample_timestamp/>
+              <Guide_1/>
+              <Take_Photo/>
+              <Take_Photo_Button_1/>
+              <Guide_2/>
+              <Scan_Barcode/>
+              <Guide_3/>
+              <Scanned_Barcode/>
+              <Guide_4/>
+              <Street_Name/>
+              <Postcode/>
+              <Guide_5/>
+              <Colgroup_1>
+                <Col_1>
+                  <Latitude/>
+                </Col_1>
+                <Col_2>
+                  <Longitude/>
+                </Col_2>
+              </Colgroup_1>
+              <Colgroup_2>
+                <Col_1>
+                  <Northing/>
+                </Col_1>
+                <Col_2>
+                  <Easting/>
+                </Col_2>
+                <Col_3>
+                  <Accuracy/>
+                </Col_3>
+              </Colgroup_2>
+              <Take_From_GPS_1/>
+            </Poop_Sample>
+          </Poop_Sample>
+        </faims>
+      </instance>
+      <bind nodeset="/faims/Poop_Sample/Poop_Sample/Postcode" type="decimal"/>
+    </model>
+  </h:head>
+  <h:body>
+    <!--START: Style-->
+    <group ref="style">
+      <label/>
+      <group ref="orientation">
+        <label/>
+        <input ref="orientation">
+          <label>horizontal</label>
+        </input>
+      </group>
+      <group ref="even">
+        <label/>
+        <input ref="layout_weight">
+          <label>1</label>
+        </input>
+      </group>
+      <group ref="large">
+        <label/>
+        <input ref="layout_weight">
+          <label>3</label>
+        </input>
+      </group>
+    </group>
+    <!--END: Style-->
+    <group ref="Login">
+      <label>{Login}</label>
+      <group ref="Group_List">
+        <label>{Group_List}</label>
+        <input faims_web="true" ref="Guide">
+          <label/>
+        </input>
+        <select1 ref="Groups">
+          <label/>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <trigger ref="School_Login">
+          <label>{School_Login}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Instructions">
+      <label>{Instructions}</label>
+      <group ref="Instructions">
+        <label>{Instructions}</label>
+        <input faims_web="true" ref="Guide">
+          <label/>
+        </input>
+        <trigger ref="Scoop_a_Poop">
+          <label>{Scoop_a_Poop}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Poop_Sample" faims_archent_type="Poop Sample">
+      <label>{Poop_Sample}</label>
+      <group ref="Poop_Sample">
+        <label>{Poop_Sample}</label>
+        <input faims_attribute_name="Poop Sample author" faims_attribute_type="measure" ref="Poop_Sample_author" faims_read_only="true">
+          <label>{School}</label>
+        </input>
+        <input faims_attribute_name="Poop Sample timestamp" faims_attribute_type="measure" ref="Poop_Sample_timestamp" faims_read_only="true">
+          <label>{Date}</label>
+        </input>
+        <input faims_web="true" ref="Guide_1">
+          <label/>
+        </input>
+        <select faims_sync="true" type="camera" faims_attribute_name="Take Photo" faims_attribute_type="measure" ref="Take_Photo">
+          <label>{Take_Photo}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <trigger ref="Take_Photo_Button_1">
+          <label>{Take_Photo}</label>
+        </trigger>
+        <input faims_web="true" ref="Guide_2">
+          <label/>
+        </input>
+        <trigger ref="Scan_Barcode">
+          <label>{Scan_Barcode}</label>
+        </trigger>
+        <input faims_web="true" ref="Guide_3">
+          <label/>
+        </input>
+        <input faims_attribute_name="Scanned Barcode" faims_attribute_type="measure" ref="Scanned_Barcode" faims_read_only="true">
+          <label>{Scanned_Barcode}</label>
+        </input>
+        <input faims_web="true" ref="Guide_4">
+          <label/>
+        </input>
+        <input faims_attribute_name="Street Name" faims_attribute_type="measure" ref="Street_Name">
+          <label>{Street_Name}</label>
+        </input>
+        <input faims_attribute_name="Postcode" faims_attribute_type="measure" ref="Postcode">
+          <label>{Postcode}</label>
+        </input>
+        <input faims_web="true" ref="Guide_5">
+          <label/>
+        </input>
+        <group ref="Colgroup_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Latitude" faims_attribute_type="measure" ref="Latitude" faims_read_only="true">
+              <label>{Latitude}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Longitude" faims_attribute_type="measure" ref="Longitude" faims_read_only="true">
+              <label>{Longitude}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_2" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Northing" faims_attribute_type="measure" ref="Northing" faims_read_only="true">
+              <label>{Northing}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Easting" faims_attribute_type="measure" ref="Easting" faims_read_only="true">
+              <label>{Easting}</label>
+            </input>
+          </group>
+          <group ref="Col_3" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Accuracy" faims_attribute_type="measure" ref="Accuracy" faims_read_only="true">
+              <label>{Accuracy}</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="Take_From_GPS_1">
+          <label>{Take_From_GPS}</label>
+        </trigger>
+      </group>
+    </group>
+  </h:body>
+</h:html>

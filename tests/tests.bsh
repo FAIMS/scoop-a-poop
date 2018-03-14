@@ -1,0 +1,18 @@
+
+{
+  String ref_barcode_btn = "Poop_Sample/Poop_Sample/Scan_Barcode";
+  String ref_barcode_txt = "Poop_Sample/Poop_Sample/Scanned_Barcode";
+
+  String dummyCode = "foo";
+
+  String getLastScanContents() {
+    return dummyCode;
+  }
+
+  String before = getFieldValue(ref_barcode_txt);
+  executeOnEvent(ref_barcode_btn, "click");
+  String after = getFieldValue(ref_barcode_txt);
+
+  assert(isNull(before));
+  assert(dummyCode.equals(after));
+}

@@ -1,0 +1,84 @@
+<!--@POSTPROC: cd data; tar -cvzf ../module/data.tar.gz * >/dev/null-->
+<module>
+
+<Login f="nodata">
+  <Group_List>
+    <Guide t="webview" f="nolabel">
+      <markdown>Please login with your school name and the password you were given by your teacher</markdown>
+    </Guide>
+    <Groups t="dropdown" f="user nolabel"/>
+    <School_Login t="button" ll="Instructions"/>
+  </Group_List>
+</Login>
+
+<Instructions f="nodata">
+  <Instructions>
+    <Guide t="webview" f="nolabel">
+      <markdown>
+<!--@SOURCE: markdown/instructions.md-->
+      </markdown>
+    </Guide>
+    <Scoop_a_Poop t="button" l="Poop_Sample"/>
+  </Instructions>
+</Instructions>
+
+<Poop_Sample>
+  <fmt>{{Scanned_Barcode}} {{author}}</fmt>
+  <Poop_Sample>
+    <author>
+      School
+    </author>
+    <timestamp>
+      Date
+    </timestamp>
+    <Guide_1 t="webview" f="nolabel">
+      <markdown>
+Take a photo of the poop in the place where you have found it.
+      </markdown>
+    </Guide_1>
+    <Take_Photo t="camera"/>
+    <Guide_2 t="webview" f="nolabel">
+      <markdown>
+Scan your barcode. You have to have installed a barcode reader app - if you don't have one, it won't work. To fix this, go to Google Play Store first and downoad for example the app called 'Barcode Scanner' from ZXing Team.
+      </markdown>
+    </Guide_2>
+    <Scan_Barcode t="button"/>
+    <Guide_3 t="webview" f="nolabel">
+      <markdown>
+A text from the scanned barcode shows here.
+      </markdown>
+    </Guide_3>
+    <Scanned_Barcode f="readonly"/>
+    <Guide_4 t="webview" f="nolabel">
+      <markdown>
+Please, enter here a name of the street where you have collected the sample.
+      </markdown>
+    </Guide_4>
+    <Street_Name/>
+    <Postcode b="decimal"/>
+    <Guide_5 t="webview" f="nolabel">
+      <markdown>
+      Enable Location (GPS) first on your device and then in the Scoop-a-Poop app
+      </markdown>
+    </Guide_5>
+    <gps/>
+  </Poop_Sample>
+</Poop_Sample>
+
+<logic><![CDATA[
+final String REF_BARCODE_BTN = "Poop_Sample/Poop_Sample/Scan_Barcode";
+final String REF_BARCODE_TXT = "Poop_Sample/Poop_Sample/Scanned_Barcode";
+
+void onClickScanBarcode() {
+  scanCode("onScanCode()");
+}
+
+void onScanCode() {
+  String code = getLastScanContents();
+  setFieldValue(REF_BARCODE_TXT, code);
+}
+
+addOnEvent(REF_BARCODE_BTN, "click", "onClickScanBarcode()");
+]]></logic>
+
+</module>
