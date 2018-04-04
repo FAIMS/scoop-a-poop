@@ -24,6 +24,7 @@ The module can be downloaded from this GitHub repository.
 * descriptive guide with instructions for users
 * barcode scanner
 * photo capture from device camera
+* password protected access
 
 ## This module can be used with no or minor modification for:
 * collecting samples
@@ -38,7 +39,13 @@ If you have any questions about the module, please contact the FAIMS team at **e
 ## Screenshots:
 
 <p align="left">
-  <img src="xxx" width="250"/>
-  <img src="xxx" width="250"/>
-  <img src="xxx" width="250"/>
+  <img src="https://github.com/FAIMS/scoop-a-poop/blob/master/screenshots/Screenshot_20180404-115208.png" width="250"/>
+  <img src="https://github.com/FAIMS/scoop-a-poop/blob/master/screenshots/Screenshot_20180404-115221.png" width="250"/>
+  <img src="https://github.com/FAIMS/scoop-a-poop/blob/master/screenshots/Screenshot_20180404-115225.png" width="250"/>
+</p>
+
+<p align="left">
+  <img src="https://github.com/FAIMS/scoop-a-poop/blob/master/screenshots/Screenshot_20180404-115230.png" width="250"/>
+  <img src="https://github.com/FAIMS/scoop-a-poop/blob/master/screenshots/Screenshot_20180404-115314.png" width="250"/>
+  <img src="https://github.com/FAIMS/scoop-a-poop/blob/master/screenshots/Screenshot_20180404-120144.png" width="250"/>
 </p>
