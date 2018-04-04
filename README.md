@@ -22,6 +22,8 @@ The module can be downloaded from this GitHub repository.
 ## This module contains the following FAIMS features:
 * coordinates from internal GPS
 * descriptive guide with instructions for users
+* barcode scanner
+* photo capture from device camera
 
 ## This module can be used with no or minor modification for:
 * collecting samples
