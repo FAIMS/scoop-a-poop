@@ -5,7 +5,7 @@ This module was created for the **Scoop a Poop Project**, based at Macquarie Uni
 This module was co-developed by Koa Webster at Macquarie University and Petra Janouchova at the FAIMS Project, Department of Ancient History, Macquarie University.
 
 ## Funding:
-Development of this module was funded by the **Research Attraction and Acceleration Program (RAAP)** aimed to support innovation and investment in the New South Wales in 2016, 2017, and 2018.
+Development of this module was funded by the **Research Attraction and Acceleration Program (RAAP) NSW Department of Industry 16805/00**, aimed to support innovation and investment in the New South Wales in 2016, 2017, and 2018.
 
 ## Date of release:
 April 2018 
